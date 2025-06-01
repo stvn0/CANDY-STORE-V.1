@@ -66,10 +66,7 @@
       display: block;
       margin-bottom: 0.4rem;
     }
-    button.add-to-cart {
-      position: absolute;
-      right: 1.5rem;
-      top: 1.5rem;
+    button.add-to-cart, .clear-cart-btn {
       background-color: #fff;
       border: none;
       padding: 0.4rem 0.8rem;
@@ -108,8 +105,14 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      margin-top: 1rem;
     }
-    .checkout-message, .thank-message, .form-thank-message {
+    .clear-cart-btn {
+      display: block;
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    .checkout-message, .thank-message {
       margin-top: 1rem;
       text-align: center;
       font-size: 1.25rem;
@@ -178,6 +181,7 @@
       <ul class="cart-items"></ul>
       <p><strong>Total: $<span id="cart-total">0.00</span></strong></p>
       <button class="checkout-btn">Checkout</button>
+      <button class="clear-cart-btn">Clear Cart</button>
       <p class="checkout-message" style="display:none;"></p>
     </section>
 
@@ -189,6 +193,7 @@
     <section>
       <h2>Rules & Support 📜</h2>
       <p>Please keep things private. Donations of 50¢ are appreciated!</p>
+      <p>We appreciate your interest and support! By purchasing from us, you're helping build something fun and responsible. Please keep transactions discreet and respectful during class hours. If you have any questions or want to support us more, feel free to reach out. Your feedback means a lot and helps us grow! 🍭</p>
     </section>
 
     <section>
@@ -201,8 +206,8 @@
         <textarea id="message" name="message" rows="4" required></textarea>
 
         <button type="submit">Send Feedback</button>
+        <p class="thank-message" style="display:none; font-weight:bold; color:white; text-align:center;">If you left a form, text 929-725-7824 "CANDY" and receive your next Welches/rice crispy treats free! 🍭</p>
       </form>
-      <p class="form-thank-message" style="display:none;">If you left a form, text 929-725-7824 "CANDY" and receive your next Welches/rice crispy treats free! 🍭</p>
     </section>
   </main>
 
@@ -212,6 +217,7 @@
     const cartItemsList = document.querySelector('.cart-items');
     const cartTotalElem = document.getElementById('cart-total');
     const checkoutBtn = document.querySelector('.checkout-btn');
+    const clearCartBtn = document.querySelector('.clear-cart-btn');
     const checkoutMessage = document.querySelector('.checkout-message');
 
     function updateCartDisplay() {
@@ -261,10 +267,15 @@
       checkoutBtn.style.display = 'none';
     });
 
+    clearCartBtn.addEventListener('click', () => {
+      for (let key in cart) delete cart[key];
+      updateCartDisplay();
+    });
+
     document.getElementById('feedback-form').addEventListener('submit', function(e) {
       e.preventDefault();
       alert('Thank you for your feedback! 🍬');
-      document.querySelector('.form-thank-message').style.display = 'block';
+      document.querySelector('.thank-message').style.display = 'block';
       this.reset();
     });
   </script>
