@@ -62,9 +62,18 @@
       color: #fff;
       position: relative;
     }
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .item-info {
+      flex: 1;
+    }
     .candy-item strong {
       display: block;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.2rem;
     }
     button.add-to-cart, .clear-cart-btn {
       background-color: #fff;
@@ -133,21 +142,45 @@
 
     <section>
       <h2>Candy Prices 🍬</h2>
+
       <div class="candy-item" data-price="1" data-name="Rice Crispy Treats">
-        <strong>Rice Crispy Treats - $1 (NEW!)</strong>
-        A soft, gooey classic. <button class="add-to-cart">Add to Cart</button>
+        <div class="item-row">
+          <div class="item-info">
+            <strong>Rice Crispy Treats - $1 (NEW!)</strong>
+            <span>A soft, gooey classic.</span>
+          </div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
       </div>
+
       <div class="candy-item" data-price="3" data-name="Gummy Clusters">
-        <strong>Gummy Clusters - $3 (BEST SELLING)</strong>
-        Crunchy outside, chewy inside. <button class="add-to-cart">Add to Cart</button>
+        <div class="item-row">
+          <div class="item-info">
+            <strong>Gummy Clusters - $3 (BEST SELLING)</strong>
+            <span>Crunchy outside, chewy inside.</span>
+          </div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
       </div>
+
       <div class="candy-item" data-price="1" data-name="Welches">
-        <strong>Welches - $1</strong>
-        Fruity and soft. <button class="add-to-cart">Add to Cart</button>
+        <div class="item-row">
+          <div class="item-info">
+            <strong>Welches - $1</strong>
+            <span>Fruity and soft.</span>
+          </div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
       </div>
+
       <div class="candy-item" data-price="4" data-name="Sour Patch Kids">
-        <strong>Sour Patch Kids (Large) - $4</strong>
-        Sour then sweet. <button class="add-to-cart">Add to Cart</button>
+        <div class="item-row">
+          <div class="item-info">
+            <strong>Sour Patch Kids (Large) - $4</strong>
+            <span>Sour then sweet.</span>
+          </div>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
       </div>
     </section>
 
@@ -193,6 +226,7 @@
       if (productNames.length === 0) {
         cartSection.style.display = 'none';
         checkoutMessage.style.display = 'none';
+        checkoutBtn.style.display = 'block';
         return;
       }
       cartSection.style.display = 'block';
@@ -240,5 +274,6 @@
   </script>
 </body>
 </html>
+
 
 
