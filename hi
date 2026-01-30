@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Why I Need the Newest iPad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(#f6f7ff, #ffffff);
+      padding: 30px;
+      text-align: center;
+    }
+    h1 { color: #4b4acb; font-size: 36px; }
+    h2 { color: #333; }
+    p { font-size: 18px; line-height: 1.6; }
+
+    .box {
+      background: white;
+      padding: 24px;
+      margin: 22px auto;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 18px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    details { margin-top: 12px; }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      color: #4b4acb;
+      font-size: 17px;
+    }
+
+    button, a.cta {
+      font-size: 18px;
+      padding: 14px 24px;
+      border-radius: 25px;
+      border: none;
+      background: #4b4acb;
+      color: white;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    button:hover, a.cta:hover {
+      background: #3a39a8;
+    }
+
+    .ending { background: #fff0f5; }
+    .ipad { background: #eef0ff; text-align: center; }
+  </style>
+</head>
+
+<body>
+
+<h1>Why I Need the Newest iPad 📱✨</h1>
+
+<div class="box">
+  <p>
+    Hi Mom 💕  
+    I made this website to explain my thinking clearly, responsibly,
+    and with a real plan.
+  </p>
+</div>
+
+<div class="box">
+  <h2>📚 School, Organization & Learning</h2>
+  <p>
+    An iPad keeps my notes, assignments, planner, and schoolwork in one place.
+    Less paper, less mess, and better focus.
+  </p>
+</div>
+
+<div class="box">
+  <h2>💻 Tutoring & Zoom Calls</h2>
+  <p>
+    I will use the iPad during tutoring sessions for Zoom calls,
+    screen sharing, and taking notes while following along.
+  </p>
+  <p>
+    This helps me focus better and get more out of tutoring.
+  </p>
+</div>
+
+<div class="box">
+  <h2>🧠 Why the Newest iPad</h2>
+  <p>
+    The newest iPad will last longer, stay updated for years,
+    and won’t need replacing anytime soon.
+  </p>
+</div>
+
+<div class="box">
+  <h2>🙋‍♀️ Mom FAQ</h2>
+
+  <details>
+    <summary>Is this just for games?</summary>
+    <p>No — school, tutoring, and organization come first. Screen-time rules still apply.</p>
+  </details>
+
+  <details>
+    <summary>Why not a cheaper or older iPad?</summary>
+    <p>
+      Older models slow down sooner and stop getting updates.
+      The newest iPad lasts longer and is better value long-term.
+    </p>
+  </details>
+
+  <details>
+    <summary>Will this be a distraction?</summary>
+    <p>
+      Only if rules aren’t followed — which is why I’m proposing limits
+      and a trial period.
+    </p>
+  </details>
+
+  <details>
+    <summary>What if responsibilities slip?</summary>
+    <p>
+      Then iPad privileges pause. Fair and simple.
+    </p>
+  </details>
+</div>
+
+<div class="box ending">
+  <h2>❤️ Final Thoughts</h2>
+  <p>
+    I truly believe this will help me stay organized, learn better,
+    and get the most out of tutoring.
+  </p>
+  <p><strong>Love, Maya 💕</strong></p>
+
+  <button onclick="document.getElementById('ipad-section').scrollIntoView({behavior:'smooth'})">
+    See the iPad I’m Asking For →
+  </button>
+</div>
+
+<!-- IPAD SECTION -->
+<div class="box ipad" id="ipad-section">
+  <h2>The iPad I’m Asking For 💙</h2>
+  <p>
+    I’m asking for the <strong>newest iPad in blue</strong> because it will last
+    the longest and work best for school and tutoring.
+  </p>
+
+  <a
+    class="cta"
+    href="https://www.apple.com/ipad/"
+    target="_blank"
+  >
+    View the Newest Blue iPad on Apple →
+  </a>
+
+  <p style="margin-top:20px;">
+    Thank you for considering this and always supporting me 💕
+  </p>
+</div>
+
+</body>
+</html>
